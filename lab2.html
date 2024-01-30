@@ -2,19 +2,258 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="lab2.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abu Omayer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/7e08352489.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <p id="para">first script using</p>
-    <button onclick="magic()">chapun</button>
-    <button onclick="list">chapun</button>
-    <br>
-    <div id="hi"></div>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul id="sidemenu">
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#about">SKILLS</a></li>
+                    <li><a href="#interest">INTERESTS</a></li>
+                    <li><a href="#portfolio">PROJECTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <i class="fa-regular fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p id="prog">Programmer</p>
+                <h1 style="color: black">
+                    Hi, I'm <span> Omayer </span> <br />
+                    From <span id="kuet">KUET</span>
+                </h1>
+            </div>
+        </div>
+    </div>
 
+    <!-------------------------- about ------------------------------------------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" alt="User" />
+                </div>
+
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p id="about-me">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+                        vero, quas iure molestiae quisquam nihil unde consequuntur odit
+                        magni consequatur repellendus aliquam quidem.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">
+                            SKILLS
+                        </p>
+                        <p class="tab-links" onclick="opentab('experience')">
+                            EXPERIENCE
+                        </p>
+                        <p class="tab-links" onclick="opentab('education')">EDUCATION</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>
+                                <span>Problem Solving</span><br />Data Structure & Algorithm
+                            </li>
+                            <br />
+                            <li><span>App Development</span><br />Building Android apps</li>
+                            <br />
+                            <li><span>Machine Learning</span><br />Building ML Model</li>
+                            <br />
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>DSA</span><br />1+ Years</li>
+                            <br />
+                            <li><span>App Development</span><br />1 Year</li>
+                            <br />
+                            <li><span>Machine Learning</span><br />1 Year</li>
+                            <br />
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - Present</span><br />BE in CSE,KUET</li>
+                            <br />
+                            <li><span>2020</span><br />High School Graduation</li>
+                            <br />
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------------------Area of interests-------------------- -->
+
+    <div id="interest">
+        <div class="container">
+            <h1 class="subtitle" style="text-align: center">Area of Interest</h1>
+            <div class="interest-list">
+                <div>
+                    <i class="fa-solid fa-microchip"></i>
+                    <h2>Machine Learning</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
+                        optio pariatur! Natus adipisci ut atque ipsam magni, odio quo
+                        dolorem omnis nulla asperiores reprehenderit illum iure, ea
+                        incidunt consectetur iste?
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-table"></i>
+                    <h2>Computational Neuroscience</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
+                        optio pariatur! Natus adipisci ut atque ipsam magni, odio quo
+                        dolorem omnis nulla asperiores reprehenderit illum iure, ea
+                        incidunt consectetur iste?
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-atom"></i>
+                    <h2>Physics</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+                        ad, veritatis minus iusto porro nemo facere fuga explicabo sint
+                        saepe dolor rem! Ratione iste id, eaque debitis quam cum tempora?
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------------------portfolio------------- -->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle" style="text-align: center">My Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/20230613_185503.jpg" />
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>its a good app for sure</p>
+
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/20230613_185503.jpg" />
+                    <div class="layer">
+                        <h3>Score Update App</h3>
+                        <p>its a good app for sure</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/20230613_185503.jpg" />
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>its a good app for sure</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!-- -------------contact------------ -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelopes-bulk"></i>contact@exmple.com</p>
+                    <p><i class="fa-solid fa-phone"></i>12345</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/omayer006/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Omayer111"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.facebook.com/abu.omayer.06/"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                    <a href="images/cv_template_sheet_en.pdf" class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required />
+                        <input type="email" name="Email" placeholder="Your Email" required />
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright" id="copyright">
+            <p>Copyright © Omayer. 2024</p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <script>
+        const scriptURL = ''
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Form Submitted Successfully!"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 </body>
 
 </html>
